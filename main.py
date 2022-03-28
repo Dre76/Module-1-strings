@@ -4,41 +4,63 @@ __human_name__ = 'strings'
 
 # Add your code after this line
 
-from doctest import REPORT_CDIFF
-
 
 scorer_name_one = 'Ruud Gullit'
 scorer_name_two = 'Marco van Basten'
 goal_0 = 32
 goal_1 = 54
 
-scorers = 'Ruud Gullit 32, Marco van Basten 54' 
+scorers = scorer_name_one + (" ") + str(goal_0)+ "," + (" ") + scorer_name_two + (" ") + str(goal_1)
+print(scorers)
 
-scorer_name_one = 'Ruud Gullit'
-scorer_name_two = 'Marco van Basten'
-when_they_scored = 32
-when_they_scored_to = 54
+report = f'{scorer_name_one} scored in the {goal_0}nd minute\n{scorer_name_two} scored in the {goal_1}th minute'
+print(report)
 
-scored_name = "Ruud Gullit"
-scored_name_1 = "Marco van Basten"
-goal_0 = 32
-goal_1 = 54
-
-f'{scored_name} scored in the {goal_0}\nd minute.' 
-f'{scored_name_1} scored in the {goal_1}\th minute.'
-
-report = f'{scored_name} scored in the {goal_0}nd minute\n' f'{scored_name_1} scored in the {goal_1}th minute'
-
-
+# deel 2
 
 player = 'Ruud Gullit'
-first_name = 'Ruud'
-last_name_len = 6
-name_short = 'R. Gullit'
-chant = 'Ruud! Ruud! Ruud! Ruud!'
-good_chant = True
+a = player.find(" ")
+first_name = player[: a]
+print(first_name)
+
+spatie = player.find(' ')
+last_name = player[spatie:]
+print(last_name.strip())
+last_name_len = len(last_name.strip())
+print(last_name_len)
+
+name_short = (first_name + last_name)
+name_short = (first_name[0] + "." + last_name)
+print(name_short)
+
+chant = (first_name + "! ") * len(first_name)
+chant = chant[:-1]
+print(chant)
+
+good_chant = first_name[3] != 'u'
 print(2 != 3)
 print(2 != 2)
+print(4 != 3)
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
 
 
 
