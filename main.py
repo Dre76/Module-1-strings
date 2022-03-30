@@ -37,7 +37,7 @@ chant = (first_name + "! ") * len(first_name)
 chant = chant[:-1]
 print(chant)
 
-good_chant = first_name[3] != 'u'
+good_chant = chant != " "
 print(2 != 3)
 print(2 != 2)
 print(4 != 3)
